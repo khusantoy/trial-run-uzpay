@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   final TextEditingController _controler = TextEditingController();
 
   String PAYME_MERCHANT_ID = '6443d473096a61fb42c216af';
-  String TRANS_ID = 'REPLACE_WITH_YOURS';
+  String TRANS_ID = '1';
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
                   paymeParams: PaymeParams(
                       transactionParam: TRANS_ID,
                       merchantId: PAYME_MERCHANT_ID,
-                      accountObject: 'userId'),
+                      accountObject: 'key'),
                 ),
               ),
               child: Row(
@@ -104,7 +104,7 @@ class _MyAppState extends State<MyApp> {
           context: context,
           builder: (context) => DialogSkeleton(
                 title: 'Brauzer tanlang',
-                icon: 'assets/tick-circle.svg',
+                icon: 'assets/browser.png',
                 color: Theme.of(context).cardTheme.color,
                 child: Padding(
                     padding: const EdgeInsets.symmetric(
@@ -139,7 +139,7 @@ class _MyAppState extends State<MyApp> {
                                                 merchantId: PAYME_MERCHANT_ID,
 
                                                 //This fields are optional
-                                                accountObject: 'userId',
+                                                accountObject: 'key',
                                                 // If changed
                                                 headerColor: Colors.indigo,
                                                 headerTitle:
@@ -172,7 +172,7 @@ class _MyAppState extends State<MyApp> {
                                               child: Column(
                                                 children: [
                                                   Image.asset(
-                                                    'assets/browsers.png',
+                                                    'assets/browser.png',
                                                     height: 40,
                                                     // color: cFirstColor,
                                                   ),
